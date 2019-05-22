@@ -9,29 +9,44 @@
 import UIKit
 import MapKit
 
-class DetailsViewController: UIViewController {
-
-    var dataReceived: MKPointAnnotation?
+class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
+    
+
+    @IBOutlet weak var tableView: UITableView!
+    
+    var dataReceived: MKPointAnnotation?
+    var city: CityDetails?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        request()
+        self.title = dataReceived?.title ?? ""
+        self.tableView.delegate  =  self
+        self.tableView.dataSource = self
+        
+        
+    }
     
     func request() {
         APIHandler.requestWeather(success: { (data) in
             let decoder = JSONDecoder()
-            print(try? decoder.decode([CityDetails].self, from: data)) ?? nil
+            self.city = try? decoder.decode(CityDetails.self, from: data)
+            print(self.city ?? "")
+            self.tableView.reloadData()
         }) { (error) in
             print(error)
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-<<<<<<< HEAD
-         request()
-=======
-        self.title = dataReceived?.title ?? ""
-         //request()
->>>>>>> 8611197fc5aa2ab7b78c81c0d788cfd9d2d90fc2
-        print(dataReceived?.title ?? "")
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
     }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        print(self.city ?? "")
+        return UITableViewCell()
+    }
+    
 
 }
