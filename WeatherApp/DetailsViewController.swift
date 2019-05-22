@@ -25,9 +25,13 @@ class DetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+<<<<<<< HEAD
          request()
+=======
+        self.title = dataReceived?.title ?? ""
+         //request()
+>>>>>>> 8611197fc5aa2ab7b78c81c0d788cfd9d2d90fc2
         print(dataReceived?.title ?? "")
-        // Do any additional setup after loading the view.
     }
 
 }
