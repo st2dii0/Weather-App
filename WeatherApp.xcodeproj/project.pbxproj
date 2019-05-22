@@ -20,6 +20,7 @@
 		92051EFD22952B01000B8A65 /* CitiesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92051EFC22952B01000B8A65 /* CitiesData.swift */; };
 		92051F0022952CD4000B8A65 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92051EFF22952CD4000B8A65 /* City.swift */; };
 		92051F02229541A5000B8A65 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92051F01229541A5000B8A65 /* DetailsViewController.swift */; };
+		FE2D878822954F89006D1519 /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2D878722954F89006D1519 /* APIHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		92051EFF22952CD4000B8A65 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		92051F01229541A5000B8A65 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		B8840AD6637179AE02047DDF /* Pods_WeatherAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE2D878722954F89006D1519 /* APIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +107,6 @@
 				5B4C0E3AC49FCF110E1F3CB5 /* Pods-WeatherAppUITests.debug.xcconfig */,
 				3C4F99ABD34B28F36DC3846C /* Pods-WeatherAppUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -153,6 +154,7 @@
 				92051EFC22952B01000B8A65 /* CitiesData.swift */,
 				92051EFF22952CD4000B8A65 /* City.swift */,
 				92051F01229541A5000B8A65 /* DetailsViewController.swift */,
+				FE2D878722954F89006D1519 /* APIHandler.swift */,
 			);
 			path = WeatherApp;
 			sourceTree = "<group>";
@@ -406,6 +408,7 @@
 				92051ED1229524F3000B8A65 /* MapViewController.swift in Sources */,
 				92051ECF229524F3000B8A65 /* AppDelegate.swift in Sources */,
 				92051F0022952CD4000B8A65 /* City.swift in Sources */,
+				FE2D878822954F89006D1519 /* APIHandler.swift in Sources */,
 				92051EFD22952B01000B8A65 /* CitiesData.swift in Sources */,
 				92051F02229541A5000B8A65 /* DetailsViewController.swift in Sources */,
 			);

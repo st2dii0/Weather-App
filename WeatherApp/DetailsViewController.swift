@@ -13,21 +13,22 @@ class DetailsViewController: UIViewController {
 
     var dataReceived: MKPointAnnotation?
     
+    
+//    func request() {
+//        APIHandler.requestWeather(name: dataReceived.name ?? "", success: { (data) in
+//            let decoder = JSONDecoder()
+//            self.characters = (try? decoder.decode([CitiesData.list].self, from: data)) ?? []
+//            self.tableView.reloadData()
+//        }) { (error) in
+//            print(error)
+//        }
+//    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+         //request()
+        print(dataReceived?.title ?? "")
         // Do any additional setup after loading the view.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
