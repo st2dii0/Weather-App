@@ -26,6 +26,7 @@ class MapViewController: UIViewController, MKMapViewDelegate{
         }
     }
 
+
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
 
         let annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "pin")
@@ -48,5 +49,6 @@ class MapViewController: UIViewController, MKMapViewDelegate{
             }
         }
     }
+    
 }
 
