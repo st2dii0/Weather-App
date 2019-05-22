@@ -27,11 +27,26 @@ class MapViewController: UIViewController, MKMapViewDelegate{
     }
 
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        
+
         let annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "pin")
-        
+
         annotationView.canShowCallout = true // Add this line in your code
         return annotationView
+    }
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        if let annotation = view.annotation as? MKPointAnnotation {
+            performSegue(withIdentifier: "DetailsSegue", sender: annotation)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "DetailsSegue"{
+            if let DetailsVC = segue.destination as? DetailsViewController{
+                DetailsVC.dataReceived = sender as? MKPointAnnotation
+                
+            }
+        }
     }
 }
 

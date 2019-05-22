@@ -51,11 +51,27 @@
                     <navigationItem key="navigationItem" id="Myt-By-aoO"/>
                     <connections>
                         <outlet property="mapView" destination="NY2-Tc-6QE" id="PT8-fy-vZU"/>
+                        <segue destination="8DR-0h-2HJ" kind="show" identifier="DetailsSegue" id="IhL-Qj-bcd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qpn-xp-Xc3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="748" y="-205"/>
+        </scene>
+        <!--Details View Controller-->
+        <scene sceneID="m4W-ZL-TeD">
+            <objects>
+                <viewController id="8DR-0h-2HJ" customClass="DetailsViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2fL-Qv-gkO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="tkY-dV-I4H"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="csn-ef-fNh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1660" y="-206"/>
         </scene>
     </scenes>
 </document>
