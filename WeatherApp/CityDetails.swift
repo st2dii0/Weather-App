@@ -14,15 +14,15 @@ struct CityDetails: Decodable {
     var latitude: Double
     var longitude: Double
     
-//    var icon: String
-//    var temperature: Double
-//    var summary: String
-//    var precipIntensity: Double
-//    var pressure: Double
-//    var humidity: Double
-//    var uvIndex: Int
-//    var hourly_summary: String
-//    var daily_summary: String
+    var icon: String
+    var temperature: Double
+    var summary: String
+    var precipIntensity: Double
+    var pressure: Double
+    var humidity: Double
+    var uvIndex: Int
+    var hourly_summary: String
+    var daily_summary: String
 }
 
 
