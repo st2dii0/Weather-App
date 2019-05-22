@@ -8,16 +8,20 @@
 
 import Foundation
 import Alamofire
+import CoreLocation
 
 struct APIHandler {
-    static func requestWeather(success: @escaping (Data)->(), failure: @escaping (Error)->()) {
-        Alamofire.request("https://api.darksky.net/forecast/465ec54364c894ee23b02036be5fa9d5/37.8267,-122.4233?UNITS=si").responseData { (response) in
-            switch response.result {
-            case .success(let value):
-                success(value)
-            case .failure(let error):
-                failure(error)
+    static func requestWeather(coordinates: CLLocationCoordinate2D?, success: @escaping (Data)->(), failure: @escaping (Error)->()) {
+        if let coordinate = coordinates {
+            Alamofire.request("https://api.darksky.net/forecast/\(apiKey)/\(coordinate.latitude),\(coordinate.longitude)?\(units)").responseData { (response) in
+                switch response.result {
+                case .success(let value):
+                    success(value)
+                case .failure(let error):
+                    failure(error)
+                }
             }
         }
+       
     }
 }

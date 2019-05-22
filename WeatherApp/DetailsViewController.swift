@@ -29,7 +29,7 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func request() {
-        APIHandler.requestWeather(success: { (data) in
+        APIHandler.requestWeather(coordinates: dataReceived.coordinates, success: { (data) in
             let decoder = JSONDecoder()
             self.city = try? decoder.decode(CityDetails.self, from: data)
             self.tableView.reloadData()
