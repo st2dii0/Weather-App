@@ -1,5 +1,5 @@
 //
-//  CityDetails.swift
+//  DetailCell.swift
 //  WeatherApp
 //
 //  Created by Thomas PHIMANESONE on 22/05/2019.
@@ -7,12 +7,5 @@
 //
 
 import Foundation
-
-
-struct CityDetails: Decodable {
-    var currently: [Currently]
-    var daily: [Daily]
-    var hourly: [Hourly]
-}
-
+import SDWebImage
 
