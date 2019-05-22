@@ -14,19 +14,18 @@ class DetailsViewController: UIViewController {
     var dataReceived: MKPointAnnotation?
     
     
-//    func request() {
-//        APIHandler.requestWeather(name: dataReceived.name ?? "", success: { (data) in
-//            let decoder = JSONDecoder()
-//            self.characters = (try? decoder.decode([CitiesData.list].self, from: data)) ?? []
-//            self.tableView.reloadData()
-//        }) { (error) in
-//            print(error)
-//        }
-//    }
+    func request() {
+        APIHandler.requestWeather(success: { (data) in
+            let decoder = JSONDecoder()
+            print(try? decoder.decode([CityDetails].self, from: data)) ?? nil
+        }) { (error) in
+            print(error)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-         //request()
+         request()
         print(dataReceived?.title ?? "")
         // Do any additional setup after loading the view.
     }
